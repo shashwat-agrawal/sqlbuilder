@@ -1,0 +1,7 @@
+class WillModifyData():
+    @classmethod
+    def modify_data(cls, dbh, sql, binds):
+        cur = dbh.cursor()
+        binds = tuple(binds)
+        cur.execute(sql, binds)
+        return
